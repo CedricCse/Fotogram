@@ -18,9 +18,10 @@ button {
 
 .header{
     background-color: rgba(9, 33, 42, 1);
-    padding-top: 15px;
-    padding-left: 100px;
-    padding-bottom: 10px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 10px;
 }
 
 .main {
@@ -58,20 +59,35 @@ button {
 }
 
 #gallery img {
+    display: block;
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 14px;
-    border: 2px solid rgb(22, 68, 88);
-    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease;
+                box-shadow: 0.3s ease;
 }
 
 .gallery-button {
     padding: 0;
-    border: none;
+    border: 2px solid rgb(22, 68 88);
     background: transparent;
     cursor: pointer;
     border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+                box-shadow: 0.3s ease;
+}
+
+.gallery-button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(255, 90, 82, 0.5);
+}
+
+.gallery-button:focus-visible {
+    outline: 3px solid rgb(255, 90, 82);
+    outline-offset: 4px;
 }
 
 .gallery-button img {
@@ -81,11 +97,6 @@ button {
     object-fit: cover;
     border-radius: 14px;
     border: 2px solid rgb(22, 68, 88);
-}
-
-.gallery-button:focus-visible {
-    outline: 3px solid rgb(255, 90, 82);
-    outline-offset: 4px;
 }
 
 .dialog-header {
@@ -111,17 +122,24 @@ button {
     border: none;
     background: transparent;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transform: translateX(10px);
+    transition: color 0.2s ease;
+}
+
+.close-button:hover{
+    color: rgb(255, 90, 82);
 }
 
 .dialog-navigation {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 36px 60px 36px;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-
+    gap: 24px;
     width: 100%;
     margin-top: 28px;
 }
@@ -130,15 +148,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 36px;
     height: 36px;
-    flex-shrink: 0;
-
     padding: 0;
     border: none;
     border-radius: 50%;
-
     background-color: #243039;
     color: #ff5a52;
     font-size: 1.5rem;
@@ -185,8 +199,10 @@ button {
 }
 
 #image-counter {
+    width: 60px;
     color: white;
     font-size: 0.75rem;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -243,3 +259,4 @@ button {
     color: rgba(153, 172, 179, 1);
     font-size: 0.875rem;
 }
+
