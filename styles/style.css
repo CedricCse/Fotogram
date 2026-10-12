@@ -166,7 +166,9 @@ button {
 #dialog-image {
     display: block;
     width: 100%;
+    max-width: 300px;
     height: auto;
+    margin: 0 auto;
     border-radius: 20px;
     object-fit: contain;
 }
