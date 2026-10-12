@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #06171d;
+    font-family: 'Figtree', sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+.header{
+    background-color: rgba(9, 33, 42, 1);
+    padding-top: 15px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(6, 23, 30, 1);
+}
+
+.photo-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0px 20px;
+    margin: 0;
+}
+
+.photo-album h1{
+    color: white;
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: 'Figtree', bold;
+    font-weight: 800;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 950px;
+}
+
+#gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid rgb(22, 68, 88);
+    cursor: pointer;
+}
+
+.gallery-button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 14px;
+}
+
+.gallery-button img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid rgb(22, 68, 88);
+}
+
+.gallery-button:focus-visible {
+    outline: 3px solid rgb(255, 90, 82);
+    outline-offset: 4px;
+}
+
+.dialog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.dialog-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.close-button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dialog-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    width: 100%;
+    margin-top: 28px;
+}
+
+.dialog-navigation button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background-color: #243039;
+    color: #ff5a52;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dialog-navigation button:hover {
+    background-color: rgb(53, 69, 80);
+}
+
+#dialog-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+#image-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    font-family: inherit;
+
+    width: 394px;
+    max-width: calc(100vw - 32px);
+    height: auto;
+    min-height: 0;
+    max-height: calc(100vh - 32px);
+
+    margin: 0;
+    padding: 36px;
+
+    border: none;
+    border-radius: 24px;
+
+    background-color: #09212a;
+    color: white;
+
+    overflow: auto;
+}
+
+#image-counter {
+    color: white;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+#image-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#image-dialog[open] {
+    display: block;
+}
+
+#image-dialog button:focus-visible {
+    outline: 2px solid #ff5a52;
+    outline-offset: 4px;
+}
+
+#image-dialog button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+
+    width: 100%;
+    min-height: 120px;
+    padding: 20px 0;
+
+    background-color: rgba(9, 33, 42, 1);
+    border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+}
+
+.footer img{
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer p{
+    color: rgba(153, 172, 179, 1);
+    font-size: 0.875rem;
+}

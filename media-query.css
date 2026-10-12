@@ -1,0 +1,932 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    /* BODY */
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* MAIN */
+    .main {
+        width: 100%;
+        padding: 48px 0;
+    }
+
+    /* PHOTO ALBUM */
+    .photo-album {
+        width: 100%;
+        gap: 32px;
+        padding: 0 16px;
+        margin: 0;
+    }
+
+    /* ÜBERSCHRIFT */
+    .photo-album h1 {
+        font-family: 'Figtree', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* BILDERGALERIE */
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .gallery-button {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        border-radius: 12px;
+    }
+
+    #gallery img,
+    .gallery-button img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    /* DIALOG */
+    #image-dialog {
+        width: calc(100vw - 24px);
+        max-width: 394px;
+        max-height: calc(100dvh - 24px);
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .dialog-content {
+        width: 100%;
+    }
+
+    .dialog-header {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .dialog-header h2 {
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    .close-button {
+        font-size: 1.5rem;
+    }
+
+    #dialog-image {
+        width: 100%;
+        height: auto;
+        max-height: 55dvh;
+        object-fit: contain;
+        border-radius: 14px;
+    }
+
+    /* DIALOG NAVIGATION */
+    .dialog-navigation {
+        gap: 24px;
+        margin-top: 20px;
+    }
+
+    .dialog-navigation button {
+        width: 36px;
+        height: 36px;
+        font-size: 1.5rem;
+    }
+
+    #image-counter {
+        font-size: 0.75rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        width: 100%;
+        min-height: 110px;
+        padding: 24px 16px;
+        gap: 10px;
+        border-radius: 50% 50% 0 0 / 12% 12% 0 0;
+    }
+
+    .footer-logo {
+        gap: 8px;
+        font-size: 1.25rem;
+    }
+
+    .footer img {
+        width: 44px;
+        height: auto;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* BODY */
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    /* HEADER */
+    .header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 15px 32px;
+        background-color: rgba(9, 33, 42, 1);
+    }
+
+    .header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* MAIN */
+    .main {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 60px 0;
+        background-color: rgba(6, 23, 30, 1);
+    }
+
+    /* PHOTO ALBUM */
+    .photo-album {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+        padding: 0 24px;
+        margin: 0;
+    }
+
+    /* ÜBERSCHRIFT */
+    .photo-album h1 {
+        color: white;
+        font-family: 'Figtree', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* BILDERGALERIE */
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        gap: 16px;
+    }
+
+    .gallery-button {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+        border: none;
+        border-radius: 14px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    #gallery img,
+    .gallery-button img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 2px solid rgb(22, 68, 88);
+        cursor: pointer;
+    }
+
+    .gallery-button:focus-visible {
+        outline: 3px solid rgb(255, 90, 82);
+        outline-offset: 4px;
+    }
+
+    /* DIALOG */
+    #image-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+
+        width: 394px;
+        max-width: calc(100vw - 32px);
+        height: auto;
+        min-height: 0;
+        max-height: calc(100dvh - 32px);
+
+        margin: 0;
+        padding: 28px;
+
+        border: none;
+        border-radius: 24px;
+
+        background-color: #09212a;
+        color: white;
+        font-family: 'Figtree', sans-serif;
+
+        overflow: auto;
+    }
+
+    .dialog-content {
+        width: 100%;
+    }
+
+    /* DIALOG HEADER */
+    .dialog-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .dialog-header h2 {
+        margin: 0;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+    }
+
+    .close-button {
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* DIALOG IMAGE */
+    #dialog-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 60dvh;
+        object-fit: contain;
+        border-radius: 18px;
+    }
+
+    /* DIALOG NAVIGATION */
+    .dialog-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 32px;
+        margin-top: 24px;
+    }
+
+    .dialog-navigation button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+
+        background-color: #243039;
+        color: #ff5a52;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .dialog-navigation button:hover {
+        background-color: rgb(53, 69, 80);
+    }
+
+    #image-counter {
+        color: white;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    #image-dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #image-dialog[open] {
+        display: block;
+    }
+
+    #image-dialog button:focus-visible {
+        outline: 2px solid #ff5a52;
+        outline-offset: 4px;
+    }
+
+    #image-dialog button:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        min-height: 120px;
+        gap: 12px;
+        margin-top: auto;
+        padding: 24px 20px;
+
+        background-color: rgba(9, 33, 42, 1);
+        border-radius: 50% 50% 0 0 / 16% 16% 0 0;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .footer img {
+        display: block;
+        width: 50px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footer p {
+        color: rgba(153, 172, 179, 1);
+        font-size: 0.875rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /* BODY */
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    /* HEADER */
+    .header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 15px 50px;
+        background-color: rgba(9, 33, 42, 1);
+    }
+
+    .header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* MAIN */
+    .main {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 70px 0;
+        background-color: rgba(6, 23, 30, 1);
+    }
+
+    /* PHOTO ALBUM */
+    .photo-album {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 50px;
+        padding: 0 32px;
+        margin: 0;
+    }
+
+    /* ÜBERSCHRIFT */
+    .photo-album h1 {
+        color: white;
+        font-family: 'Figtree', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* BILDERGALERIE */
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        justify-content: center;
+        width: 100%;
+        max-width: 800px;
+        gap: 16px;
+    }
+
+    .gallery-button {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+        border: none;
+        border-radius: 14px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    #gallery img,
+    .gallery-button img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 2px solid rgb(22, 68, 88);
+        cursor: pointer;
+    }
+
+    .gallery-button:focus-visible {
+        outline: 3px solid rgb(255, 90, 82);
+        outline-offset: 4px;
+    }
+
+    /* DIALOG */
+    #image-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+
+        width: 394px;
+        max-width: calc(100vw - 32px);
+        height: auto;
+        min-height: 0;
+        max-height: calc(100dvh - 32px);
+
+        margin: 0;
+        padding: 32px;
+
+        border: none;
+        border-radius: 24px;
+
+        background-color: #09212a;
+        color: white;
+        font-family: 'Figtree', sans-serif;
+
+        overflow: auto;
+    }
+
+    .dialog-content {
+        width: 100%;
+    }
+
+    /* DIALOG HEADER */
+    .dialog-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .dialog-header h2 {
+        margin: 0;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+    }
+
+    .close-button {
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* DIALOG IMAGE */
+    #dialog-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 60dvh;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    /* DIALOG NAVIGATION */
+    .dialog-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 32px;
+        margin-top: 28px;
+    }
+
+    .dialog-navigation button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+
+        background-color: #243039;
+        color: #ff5a52;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .dialog-navigation button:hover {
+        background-color: rgb(53, 69, 80);
+    }
+
+    #image-counter {
+        color: white;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    #image-dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #image-dialog[open] {
+        display: block;
+    }
+
+    #image-dialog button:focus-visible {
+        outline: 2px solid #ff5a52;
+        outline-offset: 4px;
+    }
+
+    #image-dialog button:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        min-height: 120px;
+        gap: 12px;
+        margin-top: auto;
+        padding: 24px 24px;
+
+        background-color: rgba(9, 33, 42, 1);
+        border-radius: 50% 50% 0 0 / 18% 18% 0 0;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .footer img {
+        display: block;
+        width: 55px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footer p {
+        color: rgba(153, 172, 179, 1);
+        font-size: 0.875rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+    /* BODY */
+    body {
+        width: 100%;
+        min-height: 100vh;
+        font-family: 'Figtree', sans-serif;
+    }
+
+    /* HEADER */
+    .header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 15px 80px 10px;
+        background-color: rgba(9, 33, 42, 1);
+    }
+
+    .header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* MAIN */
+    .main {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 80px 0;
+        background-color: rgba(6, 23, 30, 1);
+    }
+
+    /* PHOTO ALBUM */
+    .photo-album {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 60px;
+        padding: 0 40px;
+        margin: 0;
+    }
+
+    /* ÜBERSCHRIFT */
+    .photo-album h1 {
+        color: white;
+        font-family: 'Figtree', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* BILDERGALERIE: 7 OBEN / 5 UNTEN */
+    #gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        max-width: 950px;
+        gap: 16px;
+    }
+
+    .gallery-button {
+        display: block;
+        flex: 0 0 120px;
+        width: 120px;
+        height: 120px;
+        padding: 0;
+        border: none;
+        border-radius: 14px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    #gallery img,
+    .gallery-button img {
+        display: block;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 2px solid rgb(22, 68, 88);
+        cursor: pointer;
+    }
+
+    .gallery-button:focus-visible {
+        outline: 3px solid rgb(255, 90, 82);
+        outline-offset: 4px;
+    }
+
+    /* DIALOG */
+    #image-dialog {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+
+        width: 394px;
+        max-width: calc(100vw - 32px);
+        height: auto;
+        min-height: 0;
+        max-height: calc(100dvh - 32px);
+
+        margin: 0;
+        padding: 36px;
+
+        border: none;
+        border-radius: 24px;
+
+        background-color: #09212a;
+        color: white;
+        font-family: 'Figtree', sans-serif;
+
+        overflow: auto;
+    }
+
+    .dialog-content {
+        width: 100%;
+    }
+
+    /* DIALOG HEADER */
+    .dialog-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .dialog-header h2 {
+        margin: 0;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        overflow-wrap: anywhere;
+    }
+
+    .close-button {
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* DIALOG IMAGE */
+    #dialog-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 60dvh;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    /* DIALOG NAVIGATION */
+    .dialog-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 32px;
+        margin-top: 28px;
+    }
+
+    .dialog-navigation button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+
+        background-color: #243039;
+        color: #ff5a52;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .dialog-navigation button:hover {
+        background-color: rgb(53, 69, 80);
+    }
+
+    #image-counter {
+        color: white;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    #image-dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    #image-dialog[open] {
+        display: block;
+    }
+
+    #image-dialog button:focus-visible {
+        outline: 2px solid #ff5a52;
+        outline-offset: 4px;
+    }
+
+    #image-dialog button:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        min-height: 120px;
+        gap: 12px;
+        margin-top: auto;
+        padding: 20px 24px;
+
+        background-color: rgba(9, 33, 42, 1);
+        border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .footer img {
+        display: block;
+        width: 55px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footer p {
+        color: rgba(153, 172, 179, 1);
+        font-size: 0.875rem;
+        text-align: center;
+    }
+}
