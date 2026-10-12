@@ -1,13 +1,11 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
-    /* BODY */
     body {
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
     }
 
-    /* HEADER */
     .header {
         display: flex;
         align-items: center;
@@ -20,13 +18,11 @@
         height: auto;
     }
 
-    /* MAIN */
     .main {
         width: 100%;
         padding: 48px 0;
     }
 
-    /* PHOTO ALBUM */
     .photo-album {
         width: 100%;
         gap: 32px;
@@ -34,7 +30,6 @@
         margin: 0;
     }
 
-    /* ÜBERSCHRIFT */
     .photo-album h1 {
         font-family: 'Figtree', sans-serif;
         font-size: 1.75rem;
@@ -43,7 +38,6 @@
         text-align: center;
     }
 
-    /* BILDERGALERIE */
     #gallery {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -69,7 +63,6 @@
         border-radius: 12px;
     }
 
-    /* DIALOG */
     #image-dialog {
         width: calc(100vw - 24px);
         max-width: 394px;
@@ -104,7 +97,6 @@
         border-radius: 14px;
     }
 
-    /* DIALOG NAVIGATION */
     .dialog-navigation {
         gap: 24px;
         margin-top: 20px;
@@ -120,7 +112,6 @@
         font-size: 0.75rem;
     }
 
-    /* FOOTER */
     .footer {
         width: 100%;
         min-height: 110px;
@@ -147,7 +138,6 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
-    /* BODY */
     body {
         width: 100%;
         min-height: 100vh;
@@ -155,7 +145,6 @@
         font-family: 'Figtree', sans-serif;
     }
 
-    /* HEADER */
     .header {
         display: flex;
         align-items: center;
@@ -169,7 +158,6 @@
         height: auto;
     }
 
-    /* MAIN */
     .main {
         display: flex;
         flex: 1;
@@ -180,7 +168,6 @@
         background-color: rgba(6, 23, 30, 1);
     }
 
-    /* PHOTO ALBUM */
     .photo-album {
         display: flex;
         flex-direction: column;
@@ -192,7 +179,6 @@
         margin: 0;
     }
 
-    /* ÜBERSCHRIFT */
     .photo-album h1 {
         color: white;
         font-family: 'Figtree', sans-serif;
@@ -202,7 +188,6 @@
         text-align: center;
     }
 
-    /* BILDERGALERIE */
     #gallery {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -240,7 +225,6 @@
         outline-offset: 4px;
     }
 
-    /* DIALOG */
     #image-dialog {
         position: fixed;
         top: 50%;
@@ -272,7 +256,6 @@
         width: 100%;
     }
 
-    /* DIALOG HEADER */
     .dialog-header {
         display: flex;
         flex-direction: row;
@@ -299,7 +282,6 @@
         cursor: pointer;
     }
 
-    /* DIALOG IMAGE */
     #dialog-image {
         display: block;
         width: 100%;
@@ -309,7 +291,6 @@
         border-radius: 18px;
     }
 
-    /* DIALOG NAVIGATION */
     .dialog-navigation {
         display: flex;
         flex-direction: row;
@@ -366,7 +347,6 @@
         outline: none;
     }
 
-    /* FOOTER */
     .footer {
         display: flex;
         flex-direction: column;
@@ -409,7 +389,6 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-    /* BODY */
     body {
         width: 100%;
         min-height: 100vh;
@@ -417,7 +396,6 @@
         font-family: 'Figtree', sans-serif;
     }
 
-    /* HEADER */
     .header {
         display: flex;
         align-items: center;
@@ -431,7 +409,6 @@
         height: auto;
     }
 
-    /* MAIN */
     .main {
         display: flex;
         flex: 1;
@@ -442,7 +419,6 @@
         background-color: rgba(6, 23, 30, 1);
     }
 
-    /* PHOTO ALBUM */
     .photo-album {
         display: flex;
         flex-direction: column;
@@ -454,7 +430,6 @@
         margin: 0;
     }
 
-    /* ÜBERSCHRIFT */
     .photo-album h1 {
         color: white;
         font-family: 'Figtree', sans-serif;
@@ -464,7 +439,6 @@
         text-align: center;
     }
 
-    /* BILDERGALERIE */
     #gallery {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -502,7 +476,6 @@
         outline-offset: 4px;
     }
 
-    /* DIALOG */
     #image-dialog {
         position: fixed;
         top: 50%;
@@ -534,7 +507,6 @@
         width: 100%;
     }
 
-    /* DIALOG HEADER */
     .dialog-header {
         display: flex;
         flex-direction: row;
@@ -561,7 +533,6 @@
         cursor: pointer;
     }
 
-    /* DIALOG IMAGE */
     #dialog-image {
         display: block;
         width: 100%;
@@ -571,7 +542,6 @@
         border-radius: 20px;
     }
 
-    /* DIALOG NAVIGATION */
     .dialog-navigation {
         display: flex;
         flex-direction: row;
@@ -628,7 +598,6 @@
         outline: none;
     }
 
-    /* FOOTER */
     .footer {
         display: flex;
         flex-direction: column;
@@ -671,14 +640,12 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
 
-    /* BODY */
     body {
         width: 100%;
         min-height: 100vh;
         font-family: 'Figtree', sans-serif;
     }
 
-    /* HEADER */
     .header {
         display: flex;
         align-items: center;
@@ -692,7 +659,6 @@
         height: auto;
     }
 
-    /* MAIN */
     .main {
         display: flex;
         flex: 1;
@@ -703,7 +669,6 @@
         background-color: rgba(6, 23, 30, 1);
     }
 
-    /* PHOTO ALBUM */
     .photo-album {
         display: flex;
         flex-direction: column;
@@ -715,7 +680,6 @@
         margin: 0;
     }
 
-    /* ÜBERSCHRIFT */
     .photo-album h1 {
         color: white;
         font-family: 'Figtree', sans-serif;
@@ -725,7 +689,6 @@
         text-align: center;
     }
 
-    /* BILDERGALERIE: 7 OBEN / 5 UNTEN */
     #gallery {
         display: flex;
         flex-wrap: wrap;
@@ -764,7 +727,6 @@
         outline-offset: 4px;
     }
 
-    /* DIALOG */
     #image-dialog {
         position: fixed;
         top: 50%;
@@ -796,7 +758,6 @@
         width: 100%;
     }
 
-    /* DIALOG HEADER */
     .dialog-header {
         display: flex;
         flex-direction: row;
@@ -823,7 +784,6 @@
         cursor: pointer;
     }
 
-    /* DIALOG IMAGE */
     #dialog-image {
         display: block;
         width: 100%;
@@ -833,7 +793,6 @@
         border-radius: 20px;
     }
 
-    /* DIALOG NAVIGATION */
     .dialog-navigation {
         display: flex;
         flex-direction: row;
@@ -890,7 +849,6 @@
         outline: none;
     }
 
-    /* FOOTER */
     .footer {
         display: flex;
         flex-direction: column;
