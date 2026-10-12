@@ -34,19 +34,12 @@ function renderGallery() {
     gallery.innerHTML = "";
 
     for (let i = 0; i < myImgs.length; i++) {
-        gallery.innerHTML += `
-            <button
-                class="gallery-button"
-                onclick="openImage(${i})"
-                aria-label="${imageDescriptions[i]} vergrößern"
-            >
-                <img
-                    src="${myImgs[i]}"
-                    alt="${imageDescriptions[i]}"
-                >
-            </button>
-        `;
+        gallery.innerHTML += getImageTemplate(i);
     }
 }
 
-renderGallery();
+function init() {
+    renderGallery();
+    initDialogClickListener();
+    initKeyboardListener();
+}

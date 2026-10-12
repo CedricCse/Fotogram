@@ -2,7 +2,6 @@ let currentImageIndex = 0;
 
 function openImage(index) {
     currentImageIndex = index;
-
     updateDialog();
 
     document.getElementById("image-dialog").showModal();
@@ -22,7 +21,7 @@ function updateDialog() {
     let fileName = myImgs[currentImageIndex].split("/").pop();
 
     dialogTitle.textContent = fileName;
-    dialogImage.alt = fileName;
+    dialogImage.alt = imageDescriptions[currentImageIndex];
     imageCounter.textContent = `${currentImageIndex + 1}/${myImgs.length}`;
 }
 
@@ -36,28 +35,47 @@ function previousImage() {
     updateDialog();
 }
 
-let dialog = document.getElementById("image-dialog");
-
-dialog.addEventListener("click", function(event) {
-    if (event.target === dialog) {
-        closeImage();
-    }
-});
-
-document.addEventListener("keydown", function(event) {
+function initDialogClickListener() {
     let dialog = document.getElementById("image-dialog");
 
-    if (!dialog.open) {
-        return;
-    }
+    dialog.addEventListener("click", function(event) {
+        if (event.target === dialog) {
+            closeImage();
+        }
+    });
+}
 
-    if (event.key === "ArrowRight") {
-        event.preventDefault();
-        nextImage();
-    }
+function initKeyboardListener() {
+    document.addEventListener("keydown", function(event) {
+        let dialog = document.getElementById("image-dialog");
 
-    if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        previousImage();
-    }
-});
+        if (!dialog.open) {
+            return;
+        }
+
+        if (event.key === "ArrowRight") {
+            event.preventDefault();
+            nextImage();
+        }
+
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            previousImage();
+        }
+    });
+}
+
+function getImageTemplate(i) {
+    return `
+        <button
+            class="gallery-button"
+            onclick="openImage(${i})"
+            aria-label="${imageDescriptions[i]} vergrößern"
+        >
+            <img
+                src="${myImgs[i]}"
+                alt="${imageDescriptions[i]}"
+            >
+        </button>
+    `;
+}
